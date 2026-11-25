@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: Lint, Types & Tests (PHP 8.5)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP 8.5
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.5'
+          extensions: zip, curl, openssl, mbstring, :intl, :bcmath
+          tools: composer:v2
+          coverage: none
+
+      - name: Install Composer dependencies
+        run: composer install --prefer-dist --no-interaction --no-progress
+
+      - name: Run CI checks
+        run: composer ci:check
+
+  validate-packages:
+    name: Validate Composer Manifests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP 8.5
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.5'
+          extensions: zip, curl, openssl, mbstring, :intl, :bcmath
+          tools: composer:v2
+          coverage: none
+
+      - name: Validate root and package composer.json files
+        run: |
+          set -euo pipefail
+          composer validate --strict
+          for pkg in core parsers weather laravel provider-garmin-personal provider-file-import; do
+            composer validate --strict "packages/${pkg}/composer.json"
+          done

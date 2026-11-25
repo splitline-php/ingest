@@ -1,0 +1,65 @@
+name: Subtree Split
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+
+permissions:
+  contents: read
+
+jobs:
+  split:
+    name: Split ${{ matrix.repo }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - dir: packages/core
+            repo: core
+          - dir: packages/parsers
+            repo: parsers
+          - dir: packages/weather
+            repo: weather
+          - dir: packages/laravel
+            repo: laravel
+          - dir: packages/provider-garmin-personal
+            repo: provider-garmin-personal
+          - dir: packages/provider-file-import
+            repo: provider-file-import
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download splitsh-lite
+        run: |
+          set -euo pipefail
+          curl -fsSL https://github.com/splitsh/lite/releases/download/v1.0.1/lite_linux_amd64.tar.gz \
+            | tar -xz splitsh-lite
+          chmod +x ./splitsh-lite
+
+      - name: Split and push to mirror repository
+        env:
+          SPLIT_TOKEN: ${{ secrets.SPLIT_TOKEN }}
+          PACKAGE_DIR: ${{ matrix.dir }}
+          MIRROR_REPO: ${{ matrix.repo }}
+        run: |
+          set -euo pipefail
+
+          SHA=$(./splitsh-lite --prefix="${PACKAGE_DIR}")
+          REMOTE="https://x-access-token:${SPLIT_TOKEN}@github.com/splitline-php/${MIRROR_REPO}.git"
+
+          if [[ "${GITHUB_REF}" == "refs/heads/main" ]]; then
+            git push --force "${REMOTE}" "${SHA}:refs/heads/main"
+          elif [[ "${GITHUB_REF}" == refs/tags/v* ]]; then
+            git push "${REMOTE}" "${SHA}:refs/tags/${GITHUB_REF_NAME}"
+          else
+            echo "Unsupported ref: ${GITHUB_REF}" >&2
+            exit 1
+          fi
