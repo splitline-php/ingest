@@ -1,0 +1,36 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "splitline/laravel",
+    "description": "Laravel HTTP, Cache, Sleep, and ServiceProvider bridge for Splitline telemetry packages.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/splitline-php/ingest",
+    "support": {
+        "issues": "https://github.com/splitline-php/ingest/issues",
+        "source": "https://github.com/splitline-php/ingest"
+    },
+    "require": {
+        "php": "^8.5",
+        "illuminate/contracts": "^13.0",
+        "illuminate/http": "^13.0",
+        "illuminate/support": "^13.0",
+        "splitline/core": "^0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Splitline\\Laravel\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Splitline\\Laravel\\SplitlineServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

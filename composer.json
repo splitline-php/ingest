@@ -1,0 +1,77 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "splitline/ingest",
+    "description": "Open-source PHP endurance telemetry, FIT parsing, weather enrichment, and wearable ingestion monorepo.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/splitline-php/ingest",
+    "support": {
+        "issues": "https://github.com/splitline-php/ingest/issues",
+        "source": "https://github.com/splitline-php/ingest"
+    },
+    "require": {
+        "php": "^8.5",
+        "ext-zip": "*",
+        "nesbot/carbon": "^3.0"
+    },
+    "require-dev": {
+        "illuminate/cache": "^13.0",
+        "illuminate/contracts": "^13.0",
+        "illuminate/http": "^13.0",
+        "illuminate/support": "^13.0",
+        "laravel/pint": "^1.27",
+        "orchestra/testbench": "^11.0",
+        "pestphp/pest": "^5.3",
+        "phpstan/phpstan": "^2.1"
+    },
+    "replace": {
+        "splitline/core": "self.version",
+        "splitline/parsers": "self.version",
+        "splitline/weather": "self.version",
+        "splitline/laravel": "self.version",
+        "splitline/provider-garmin-personal": "self.version",
+        "splitline/provider-file-import": "self.version"
+    },
+    "autoload": {
+        "psr-4": {
+            "Splitline\\Core\\": "packages/core/src/",
+            "Splitline\\Parsers\\": "packages/parsers/src/",
+            "Splitline\\Weather\\": "packages/weather/src/",
+            "Splitline\\Laravel\\": "packages/laravel/src/",
+            "Splitline\\ProviderGarminPersonal\\": "packages/provider-garmin-personal/src/",
+            "Splitline\\ProviderFileImport\\": "packages/provider-file-import/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Splitline\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "lint": [
+            "pint --parallel"
+        ],
+        "lint:check": [
+            "pint --parallel --test"
+        ],
+        "types:check": [
+            "phpstan analyse --memory-limit=512M"
+        ],
+        "test": [
+            "pest"
+        ],
+        "ci:check": [
+            "@lint:check",
+            "@types:check",
+            "@test"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

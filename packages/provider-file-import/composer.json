@@ -1,0 +1,30 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "splitline/provider-file-import",
+    "description": "Standalone .fit and .zip file import provider for Splitline.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/splitline-php/ingest",
+    "support": {
+        "issues": "https://github.com/splitline-php/ingest/issues",
+        "source": "https://github.com/splitline-php/ingest"
+    },
+    "require": {
+        "php": "^8.5",
+        "nesbot/carbon": "^3.0",
+        "splitline/core": "^0.1",
+        "splitline/parsers": "^0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Splitline\\ProviderFileImport\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1-dev"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
