@@ -1,0 +1,10 @@
+{
+    "chronologicalAge": 43,
+    "fitnessAge": 35.4,
+    "previousFitnessAge": 35.8,
+    "components": {
+        "rhr": {
+            "value": 47
+        }
+    }
+}

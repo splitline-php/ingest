@@ -1,0 +1,155 @@
+[
+    {
+        "activityId": 9001,
+        "activityName": "Park Tempo Run",
+        "startTimeLocal": "2026-11-21 08:00:00",
+        "startTimeGMT": "2026-11-20 19:00:00",
+        "locationName": "Sample City",
+        "startLatitude": -43.5309,
+        "startLongitude": 172.6362,
+        "activityType": {
+            "typeKey": "running"
+        },
+        "distance": 10050.5,
+        "duration": 2710.0,
+        "movingDuration": 2690.0,
+        "elapsedDuration": 2720.0,
+        "elevationGain": 45.0,
+        "elevationLoss": 42.0,
+        "minElevation": 12.0,
+        "maxElevation": 38.5,
+        "averageSpeed": 3.71,
+        "maxSpeed": 4.45,
+        "avgGradeAdjustedSpeed": 3.76,
+        "calories": 680,
+        "bmrCalories": 85,
+        "waterEstimated": 620,
+        "averageHR": 158,
+        "maxHR": 176,
+        "averageRunningCadenceInStepsPerMinute": 172.5,
+        "maxRunningCadenceInStepsPerMinute": 184.0,
+        "avgStrideLength": 126.4,
+        "avgVerticalOscillation": 8.4,
+        "avgVerticalRatio": 6.7,
+        "avgGroundContactTime": 238.5,
+        "steps": 7790,
+        "aerobicTrainingEffect": 3.8,
+        "anaerobicTrainingEffect": 1.1,
+        "activityTrainingLoad": 142.5,
+        "trainingEffectLabel": "TEMPO",
+        "aerobicTrainingEffectMessage": "IMPROVING_AEROBIC_FITNESS_2",
+        "anaerobicTrainingEffectMessage": "MINOR_ANAEROBIC_BENEFIT_15",
+        "differenceBodyBattery": -14,
+        "fastestSplit_1000": 255.0,
+        "fastestSplit_1609": 418.0,
+        "fastestSplit_5000": 1320.0,
+        "fastestSplit_10000": 2680.0,
+        "hrTimeInZone_1": 120.0,
+        "hrTimeInZone_2": 480.0,
+        "hrTimeInZone_3": 1650.0,
+        "hrTimeInZone_4": 420.0,
+        "hrTimeInZone_5": 20.0,
+        "workoutFeel": 75,
+        "workoutRpe": 60,
+        "beginPotentialStamina": 100,
+        "endPotentialStamina": 72,
+        "minActivityStamina": 70,
+        "avgRespirationRate": 36.2,
+        "minRespirationRate": 24.0,
+        "maxRespirationRate": 45.5,
+        "minTemperature": 14.0,
+        "maxTemperature": 19.5,
+        "moderateIntensityMinutes": 8,
+        "vigorousIntensityMinutes": 37,
+        "isFavorite": true,
+        "isPR": false,
+        "isManualActivity": false,
+        "splitSummaries": [
+            {
+                "splitType": "RWD_RUN",
+                "duration": 2640.456
+            },
+            {
+                "splitType": "RWD_WALK",
+                "duration": 45.123
+            },
+            {
+                "splitType": "RWD_STAND",
+                "duration": 24.421
+            }
+        ]
+    },
+    {
+        "activityId": 9002,
+        "activityName": "Coastal Road Loop",
+        "startTimeLocal": "2026-11-20 17:00:00",
+        "startTimeGMT": "2026-11-20 04:00:00",
+        "activityType": {
+            "typeKey": "road_biking"
+        },
+        "distance": 45200.0,
+        "duration": 5400.0,
+        "averageBikingCadenceInRevPerMinute": 84.0,
+        "maxBikingCadenceInRevPerMinute": 112.0,
+        "avgPower": 212.0,
+        "maxPower": 890.0,
+        "normPower": 235.0,
+        "functionalThresholdPower": 274.0,
+        "trainingStressScore": 118.4,
+        "intensityFactor": 0.86,
+        "totalWork": 1145.0,
+        "avgLeftBalance": 49.2,
+        "max20MinPower": 264.0,
+        "maxAvgPower_1": 890.0,
+        "maxAvgPower_60": 410.0,
+        "maxAvgPower_1200": 264.0,
+        "fastestSplit_40000": 4780.0,
+        "powerTimeInZone_1": 600.0,
+        "powerTimeInZone_2": 1200.0,
+        "powerTimeInZone_3": 900.0,
+        "powerTimeInZone_4": 1800.0,
+        "powerTimeInZone_5": 600.0,
+        "powerTimeInZone_6": 240.0,
+        "powerTimeInZone_7": 60.0,
+        "pr": true
+    },
+    {
+        "activityId": 9003,
+        "activityName": "Generic Cycling Session",
+        "startTimeLocal": "2026-11-19 17:00:00",
+        "startTimeGMT": "2026-11-19 04:00:00",
+        "activityType": {
+            "typeKey": "cycling"
+        },
+        "distance": 42400.0,
+        "duration": 5100.0,
+        "fastestSplit_40000": 4890.0,
+        "manualActivity": true
+    },
+    {
+        "activityId": 9004,
+        "activityName": "Forest Trail Flow",
+        "startTimeLocal": "2026-11-18 16:00:00",
+        "startTimeGMT": "2026-11-18 03:00:00",
+        "activityType": {
+            "typeKey": "mountain_biking"
+        },
+        "distance": 16500.0,
+        "duration": 3600.0,
+        "elevationGain": 640.0,
+        "elevationLoss": 645.0,
+        "grit": 24.5,
+        "avgFlow": 2.8,
+        "jumpCount": 12,
+        "splitSummaries": [
+            {
+                "splitType": "SURFACE_TYPE_PAVED",
+                "distance": 2000.0
+            },
+            {
+                "splitType": "SURFACE_TYPE_UNPAVED",
+                "distance": 8000.0
+            }
+        ]
+    }
+]

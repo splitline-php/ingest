@@ -1,0 +1,18 @@
+[
+    {
+        "generic": {
+            "calendarDate": "2026-11-21",
+            "vo2MaxPreciseValue": 47.4,
+            "vo2MaxValue": 47,
+            "sport": "RUNNING",
+            "subSport": "GENERIC"
+        },
+        "cycling": {
+            "calendarDate": "2026-11-21",
+            "vo2MaxPreciseValue": 51.2,
+            "vo2MaxValue": 51,
+            "sport": "CYCLING",
+            "subSport": "ROAD"
+        }
+    }
+]

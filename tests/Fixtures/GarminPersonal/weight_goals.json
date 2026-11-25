@@ -1,0 +1,19 @@
+{
+    "userGoals": [
+        {
+            "userGoalCategory": "MANUAL",
+            "userGoalType": "WEIGHT_GRAMS",
+            "startDate": "2026-09-04",
+            "endDate": null,
+            "goalValue": 85000,
+            "updateDate": "2026-09-04T08:40:40.0"
+        },
+        {
+            "userGoalCategory": "MANUAL",
+            "userGoalType": "STEPS",
+            "startDate": "2026-09-04",
+            "goalValue": 10000
+        }
+    ],
+    "userGoalRanges": null
+}

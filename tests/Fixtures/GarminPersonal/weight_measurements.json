@@ -1,0 +1,30 @@
+{
+    "dailyWeightSummaries": [
+        {
+            "summaryDate": "2026-11-21",
+            "allWeightMetrics": [
+                {
+                    "samplePk": 1795212000123,
+                    "calendarDate": "2026-11-21",
+                    "timestampGMT": 1795165200000,
+                    "weight": 82400,
+                    "bmi": 24.6,
+                    "bodyFat": 17.5,
+                    "bodyWater": 56.2,
+                    "boneMass": 3520,
+                    "muscleMass": 64800,
+                    "sourceType": "INDEX_SCALE"
+                }
+            ]
+        },
+        {
+            "summaryDate": "2026-11-20",
+            "latestWeight": {
+                "samplePk": 1795125600456,
+                "timestampGMT": 1795078800000,
+                "weight": 82700,
+                "sourceType": "MANUAL"
+            }
+        }
+    ]
+}

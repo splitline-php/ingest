@@ -1,0 +1,32 @@
+{
+    "summary": {
+        "calendarDate": "2026-11-21",
+        "sleepTimeSeconds": 28800,
+        "deepSleepSeconds": 5400,
+        "lightSleepSeconds": 17100,
+        "remSleepSeconds": 6300,
+        "awakeSleepSeconds": 900,
+        "napTimeSeconds": 0,
+        "sleepStartTimestampLocal": 1795213800000,
+        "sleepEndTimestampLocal": 1795243500000,
+        "sleepScores": {
+            "overall": {
+                "value": 86
+            }
+        }
+    },
+    "dailySleepNeedsOnly": {
+        "dailySleepDTO": {
+            "calendarDate": "2026-11-21",
+            "sleepTimeSeconds": null,
+            "sleepNeed": {
+                "calendarDate": "2026-11-21",
+                "actual": 480
+            },
+            "nextSleepNeed": {
+                "calendarDate": "2026-11-22",
+                "actual": 470
+            }
+        }
+    }
+}

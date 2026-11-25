@@ -1,0 +1,83 @@
+{
+    "data": [
+        {
+            "calendarDate": "2026-11-21",
+            "wellnessChronology": {
+                "totalDurationInMillis": 147600000
+            },
+            "movement": {
+                "steps": {
+                    "goal": 8000,
+                    "value": 13098,
+                    "distanceInMeters": 12888
+                },
+                "floorsAscended": {
+                    "goal": 10,
+                    "value": 8
+                },
+                "floorsDescended": {
+                    "value": 7
+                }
+            },
+            "calories": {
+                "burnedResting": 1836,
+                "burnedActive": 652,
+                "burnedTotal": 2488
+            },
+            "heartRate": {
+                "minValue": 40,
+                "maxValue": 161,
+                "restingValue": 47
+            },
+            "intensityMinutes": {
+                "goal": 300,
+                "moderate": 12,
+                "vigorous": 44
+            },
+            "stress": {
+                "avgLevel": 17,
+                "maxLevel": 87,
+                "qualifier": "calm",
+                "restDurationInMillis": 41760000,
+                "lowStressDurationInMillis": 7380000,
+                "mediumStressDurationInMillis": 1980000,
+                "highStressDurationInMillis": 240000
+            },
+            "bodyBattery": {
+                "minValue": 29,
+                "maxValue": 84,
+                "chargedValue": 27,
+                "drainedValue": 59,
+                "latestValue": 29,
+                "activityEvents": [
+                    {
+                        "eventType": "SLEEP",
+                        "bodyBatteryImpact": 49
+                    },
+                    {
+                        "eventType": "ACTIVITY",
+                        "bodyBatteryImpact": -10
+                    }
+                ]
+            },
+            "respiration": {
+                "avgValue": 13.0,
+                "minValue": 7.0,
+                "maxValue": 38.0
+            },
+            "pulseOx": {
+                "avgValue": 93.0,
+                "minValue": 86.0,
+                "latestValue": 96.0
+            }
+        },
+        {
+            "calendarDate": "2026-11-20",
+            "movement": {
+                "steps": {
+                    "value": 0
+                }
+            }
+        }
+    ]
+}
