@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0
 
@@ -41,7 +41,7 @@ jobs:
         run: |
           set -euo pipefail
           curl -fsSL https://github.com/splitsh/lite/releases/download/v1.0.1/lite_linux_amd64.tar.gz \
-            | tar -xz splitsh-lite
+            | tar -xz -- ./splitsh-lite
           chmod +x ./splitsh-lite
 
       - name: Split and push to mirror repository
